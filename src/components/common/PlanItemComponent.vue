@@ -69,7 +69,7 @@ withDefaults(defineProps<Props>(), {
 })
 
 const redirectToRegister = () => {
-  window.open('https://agreeable-glacier-01474611e.6.azurestaticapps.net/registrar', '_blank')
+  window.open('https://delightful-cliff-0e1fe8e1e.7.azurestaticapps.net', '_blank')
 }
 </script>
   

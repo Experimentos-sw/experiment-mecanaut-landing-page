@@ -257,7 +257,7 @@ watch(locale, () => {
 
 const loginConfig = ref<ButtonConfig>({
   text: t('navbar.login'),
-  href: 'https://agreeable-glacier-01474611e.6.azurestaticapps.net',
+  href: 'https://delightful-cliff-0e1fe8e1e.7.azurestaticapps.net',
   ariaLabel: t('navbar.loginAriaLabel'),
   onClick: () => {
     isMobileMenuOpen.value = false
@@ -266,7 +266,7 @@ const loginConfig = ref<ButtonConfig>({
 
 const registerConfig = ref<ButtonConfig>({
   text: t('navbar.register'),
-  href: 'https://agreeable-glacier-01474611e.6.azurestaticapps.net',
+  href: 'https://delightful-cliff-0e1fe8e1e.7.azurestaticapps.net',
   ariaLabel: t('navbar.registerAriaLabel'),
   onClick: () => {
     console.log('Abriendo modal de registro')

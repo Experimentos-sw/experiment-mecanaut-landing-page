@@ -19,9 +19,6 @@
     <div id="video">
       <ProductVideoComponent />
     </div>
-    <div id="video">
-      <TeamVideoComponent />
-    </div>
     <FooterComponent />
   </div>
 </template>
