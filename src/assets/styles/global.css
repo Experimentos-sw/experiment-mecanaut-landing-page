@@ -1,0 +1,58 @@
+@import './variables.css';
+@import './typography.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+}
+
+/* Body */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg);
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Listas sin viñetas */
+ul {
+  list-style: none;
+}
+
+:root {
+  --scrollbar-color: #6c60b8;
+  --scrollbar-bg: #f0f0f0;
+  --scrollbar-width: 10px;
+  --scrollbar-hover-color: #5a4fa5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover-color);
+}

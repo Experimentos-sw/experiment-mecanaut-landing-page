@@ -1,0 +1,160 @@
+{  
+  "navbar": {
+    "home": "Home",
+    "product": "Product",
+    "benefits": "Benefits",
+    "plans": "Plans",
+    "faq": "FAQ",
+    "login": "Log In",
+    "loginAriaLabel": "Log into the platform",
+    "register": "Sign Up",
+    "registerAriaLabel": "Create a new account"
+  },
+  "hero": {
+    "title": "Mecanaut",
+    "subtitle": "Manage your machinery maintenance like a professional",
+    "description": "Mecanaut centralizes preventive, corrective, and predictive maintenance for any type of company."
+  },
+  "product": {
+    "sectionTitle": "Product",
+    "title": "What is Mecanaut?",
+    "subtitle": "Discover Mecanaut, the software designed to revolutionize machinery maintenance.",
+    "description": "Designed for companies looking to optimize their processes and reduce downtime, Mecanaut tackles maintenance challenges on three fronts",
+    "features": {
+      "preventive": "Preventive Maintenance",
+      "corrective": "Corrective Maintenance",
+      "predictive": "Predictive Maintenance"
+    },
+    "maintenanceTypes": "Maintenance Types",
+    "maintenance": {
+      "preventive": {
+        "title": "Preventive",
+        "description": "Plan and schedule routine inspections to prevent unexpected failures."
+      },
+      "corrective": {
+        "title": "Corrective",
+        "description": "Respond quickly to breakdowns to minimize repair times."
+      },
+      "predictive": {
+        "title": "Predictive",
+        "description": "Anticipate intervention needs through historical data analysis."
+      }
+    }
+  },
+  "benefits": {
+    "sectionTitle": "Benefits",
+    "items": [
+      {
+        "titleBefore": "Make decisions with ",
+        "titleHighlight": "real data",
+        "description": "Check indicators such as frequent failures, repair times, or availability."
+      },
+      {
+        "titleBefore": "Easily manage ",
+        "titleHighlight": "equipment maintenance",
+        "description": "Schedule preventive, corrective, and predictive maintenance with automatic reminders."
+      },
+      {
+        "titleBefore": "All your history, ",
+        "titleHighlight": "always at hand",
+        "description": "Access the history of each machine: what was done, when, and who did it."
+      },
+      {
+        "titleBefore": "Adapts to any ",
+        "titleHighlight": "type of business",
+        "description": "Use Mecanaut for industrial machinery, transport fleets, textile lines, or warehouses."
+      },
+      {
+        "titleBefore": "Your information, ",
+        "titleHighlight": "protected in the cloud",
+        "description": "Don't lose data due to accidents. Mecanaut automatically saves and backs up your data."
+      }
+    ]
+  },
+  "plans": {
+    "title": "Plans",
+    "subtitle": "We offer you",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "free": {
+      "title": "Free Plan",
+      "price": "$0.00",
+      "features": [
+        "Up to 10 assets",
+        "Basic preventive maintenance",
+        "Manual work order registration",
+        "Email notifications for 1 admin user"
+      ]
+    },
+    "professional": {
+      "title": "Professional Plan",
+      "features": [
+        "Up to 50 assets",
+        "Everything in the Free plan",
+        "Corrective and predictive maintenance",
+        "Performance indicators (MTTR, MTBF, etc.)",
+        "Complete maintenance history",
+        "Chat and email support",
+        "Up to 5 admin users"
+      ]
+    },
+    "corporate": {
+      "title": "Corporate Plan",
+      "features": [
+        "Unlimited assets",
+        "Everything in the Professional plan",
+        "Spare parts and inventory management",
+        "Unlimited quantity of related users (technician, supervisor, admin)",
+        "Priority support"
+      ]
+    },
+    "cta": "Access",
+    "time":{
+      "monthly": "monthly",
+      "yearly": "yearly"
+    }
+  },
+  "faq": {
+    "title": "Have questions?",
+    "subtitle": "Here we answer your most frequent questions.",
+    "questions": [
+      {
+        "question": "What is Mecanaut and how does it help me?",
+        "answer": "Mecanaut is software that organizes and automates your machinery maintenance. It prevents oversights, reduces failures, and improves control of your operation."
+      },
+      {
+        "question": "Does the free plan have a time limit?",
+        "answer": "No, the free plan has no time limit. You can use it indefinitely with the included basic features."
+      },
+      {
+        "question": "What if I need more assets or users?",
+        "answer": "You can upgrade to our Professional or Corporate plans at any time to increase asset and user capacity according to your needs."
+      },
+      {
+        "question": "Do I need to install anything?",
+        "answer": "No, Mecanaut is a web application that works completely in the cloud. You only need an updated web browser to access it from any device."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "©2025 Mecanaut. All rights reserved."
+  },
+  "statistics": {
+    "lessFailures": {
+      "title": "30%",
+      "subtitle": "Fewer failures"
+    },
+    "scheduledMaintenance": {
+      "title": "+1000",
+      "subtitle": "Scheduled maintenances"
+    },
+    "lessTime": {
+      "title": "40%",
+      "subtitle": "Less downtime"
+    }
+  },
+  "video": {
+    "product": "' About the Product '",
+    "team": "' About the Team '"
+  }
+}

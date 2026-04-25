@@ -1,0 +1,19 @@
+:root {
+  /* Colores primarios */
+  --color-text: #323232;
+  --color-primary-5: #18549e;
+  --color-primary-4: #2e80e4;
+  --color-primary-3: #eca6bb;
+  --color-primary-2: #5b62b3;
+  --color-primary-1: #6da0e1;
+
+  /* Neutrales / fondos */
+  --color-background: #fbfbfb;
+  --color-white: #ffffff;
+  --color-gray-light: #f4f4f4;
+
+  /* Tipografía */
+  --font-family-base: 'Montserrat', sans-serif;
+  --base-font-size: 16px;
+  --base-line-height: 1.5;
+}

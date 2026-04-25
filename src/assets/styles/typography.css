@@ -1,0 +1,30 @@
+/* src/assets/styles/typography.css */
+/* Importa la fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  font-family: var(--font-family-base);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+p,
+a,
+li,
+span {
+  font-weight: 400;
+  color: var(--color-text);
+}
