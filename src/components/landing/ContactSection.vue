@@ -41,9 +41,16 @@ const submit = async () => {
   }
   loading.value = true
   try {
-    const resp = await fetch('https://mecanaut-experiment-backend-cscbg2hycucpdzds.eastus-01.azurewebsites.net/api/v1/support-requests', {
+    const apiUrl = 'https://mecanaut-experiment-backend-cscbg2hycucpdzds.eastus-01.azurewebsites.net/api/v1/support-requests'
+    const token = (import.meta.env.VITE_SUPPORT_AUTH as string) || ''
+    const headers: Record<string,string> = { 'Content-Type': 'application/json' }
+    if (token) {
+      headers['Authorization'] = token.startsWith('Bearer ') ? token : `Bearer ${token}`
+    }
+
+    const resp = await fetch(apiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ name: name.value, email: email.value, message: message.value }),
     })
     if (!resp.ok) {
