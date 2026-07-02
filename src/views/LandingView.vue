@@ -19,6 +19,9 @@
     <div id="video">
       <ProductVideoComponent />
     </div>
+    <div id="contact">
+      <ContactSection />
+    </div>
     <FooterComponent />
   </div>
 </template>
@@ -33,6 +36,7 @@ import FAQComponent from '@/components/landing/FAQComponent.vue'
 import FooterComponent from '@/components/common/FooterComponent.vue'
 import ProductVideoComponent from '@/components/landing/ProductVideoComponent.vue'
 import TeamVideoComponent from '@/components/landing/TeamVideoComponent.vue'
+import ContactSection from '@/components/landing/ContactSection.vue'
 </script>
 
 <style scoped>
