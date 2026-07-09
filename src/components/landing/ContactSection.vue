@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const name = ref('')
 const email = ref('')
@@ -31,6 +31,30 @@ const message = ref('')
 const loading = ref(false)
 const success = ref(false)
 const error = ref('')
+
+const startTime = ref(Date.now())
+
+onMounted(() => {
+  startTime.value = Date.now()
+  sendTelemetry('Assignment', 0, true, {})
+})
+
+const sendTelemetry = (actionType: string, duration: number, isSuccess: boolean, extraData: Record<string, unknown>) => {
+  const baseUrl = (import.meta.env.VITE_API_BASE_URL as string) || 'http://localhost:5128'
+  const telemetryUrl = `${baseUrl}/api/v1/experiment-telemetry`
+  fetch(telemetryUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      experimentName: 'US33-R',
+      variant: 'Treatment',
+      actionType,
+      durationMilliseconds: duration * 1000,
+      isSuccess,
+      additionalData: JSON.stringify(extraData)
+    })
+  }).catch(() => {})
+}
 
 const submit = async () => {
   error.value = ''
@@ -40,13 +64,13 @@ const submit = async () => {
     return
   }
   loading.value = true
+  
+  const duration = Math.floor((Date.now() - startTime.value) / 1000)
+
   try {
-    const apiUrl = 'https://mecanaut-experiment-backend-cscbg2hycucpdzds.eastus-01.azurewebsites.net/api/v1/support-requests'
-    const token = (import.meta.env.VITE_SUPPORT_AUTH as string) || ''
+    const baseUrl = (import.meta.env.VITE_API_BASE_URL as string) || 'http://localhost:5128'
+    const apiUrl = `${baseUrl}/api/v1/support-requests`
     const headers: Record<string,string> = { 'Content-Type': 'application/json' }
-    if (token) {
-      headers['Authorization'] = token.startsWith('Bearer ') ? token : `Bearer ${token}`
-    }
 
     const resp = await fetch(apiUrl, {
       method: 'POST',
@@ -57,13 +81,18 @@ const submit = async () => {
       const txt = await resp.text()
       throw new Error(txt || `${resp.status} ${resp.statusText}`)
     }
+    
+    sendTelemetry('Landing_Form_Submitted', duration, true, { name: name.value })
+    
     success.value = true
     name.value = ''
     email.value = ''
     message.value = ''
     setTimeout(() => (success.value = false), 5000)
-  } catch (e: any) {
-    error.value = e?.message || 'Error al enviar el mensaje.'
+  } catch (e: unknown) {
+    const errMsg = e instanceof Error ? e.message : 'Error al enviar el mensaje.'
+    error.value = errMsg
+    sendTelemetry('Landing_Form_Submitted', duration, false, { error: errMsg })
   } finally {
     loading.value = false
   }
